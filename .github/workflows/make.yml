@@ -19,6 +19,8 @@ jobs:
             label: macOS
           - os: windows-latest
             label: Windows
+          - os: ubuntu-latest
+            label: Ubuntu
     env:
       CI: true
 

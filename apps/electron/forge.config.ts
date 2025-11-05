@@ -1,6 +1,7 @@
 import type { ForgeConfig } from "@electron-forge/shared-types";
 import { MakerSquirrel } from "@electron-forge/maker-squirrel";
 import { MakerZIP } from "@electron-forge/maker-zip";
+import { MakerDeb } from "@electron-forge/maker-deb";
 import { AutoUnpackNativesPlugin } from "@electron-forge/plugin-auto-unpack-natives";
 import { WebpackPlugin } from "@electron-forge/plugin-webpack";
 import { FusesPlugin } from "@electron-forge/plugin-fuses";
@@ -63,6 +64,19 @@ const config: ForgeConfig = {
       },
       ["darwin"],
     ),
+    new MakerDeb({
+      options: {
+        name: "mcp-router",
+        productName: "MCP Router",
+        genericName: "MCP Server Manager",
+        description:
+          "Effortlessly manage your MCP servers with the MCP Router. MCP Router provides a user-friendly interface for managing MCP servers, making it easier than ever to work with the MCP.",
+        categories: ["Development", "Utility"],
+        maintainer: "fjm2u <fm.job@icloud.com>",
+        homepage: "https://github.com/mcp-router/mcp-router",
+        icon: "./public/images/icon/icon.png",
+      },
+    }),
     new MakerZIP(),
   ],
   plugins: [
