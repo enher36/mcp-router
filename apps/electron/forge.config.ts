@@ -76,6 +76,7 @@ const config: ForgeConfig = {
         maintainer: "fjm2u <fm.job@icloud.com>",
         homepage: "https://github.com/mcp-router/mcp-router",
         icon: "./public/images/icon/icon.png",
+        bin: "mcp-router",
       },
     }),
     new MakerZIP(),
