@@ -28,6 +28,7 @@ const config: ForgeConfig = {
   packagerConfig: {
     asar: true,
     icon: "./public/images/icon/icon",
+    executableName: "mcp-router",
     // Support both Intel and Apple Silicon architectures - use target arch from env
     arch: (process.env.npm_config_target_arch as any) || process.arch,
     // Only sign/notarize on macOS when credentials are available (CI-safe)
